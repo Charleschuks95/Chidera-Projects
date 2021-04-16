@@ -92,3 +92,24 @@ img{
 .pagination .active:hover{
 	background: grey;
 }
+
+#about{
+	text-align: center;
+	font-size: 1.04rem;
+	padding-bottom: 3rem;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#about p,
+#about h1,
+.about_img{
+	margin-top: 2rem;
+}
+
+.about_title{
+	font-size: 1.5rem;
+}
+
+.about_description p{
+	
+}

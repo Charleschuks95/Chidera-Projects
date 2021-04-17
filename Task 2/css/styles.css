@@ -11,6 +11,51 @@ li{
 	list-style: none;
 }
 
+nav{
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	background: #fff;
+	width: 40%;
+	z-index: 3;
+	margin-left: -300px;
+	transition: .5s;
+	box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+nav li{
+	cursor: pointer;
+	font-size: 1.5rem;
+}
+
+nav li:first-child{
+	padding: 1.5rem;
+}
+
+nav li a{
+	display: block;
+	padding: 1.5rem;
+	text-decoration: none;
+	color: #000;
+}
+
+nav li:hover{
+	background: grey;
+}
+
+/*Responsiveness*/
+
+@media (min-width: 772px){
+	nav{
+		width: 40%;
+	}
+}
+
+/*End Responsiveness*/
+
+/*Section: Header*/
+
 header{
 	position: fixed;
 	top: 0;
@@ -47,6 +92,23 @@ header{
 	background: grey;
 }
 
+/*Responsiveness*/
+
+@media (min-width: 900px){
+	.nav,
+	.container{
+		max-width: 1200px;
+	}
+}
+
+/*End Responsiveness*/
+
+/*Section: My Food*/
+
+.food_all{
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
 .my_food_content{
 	padding-top: 70px;
 	text-align: center;
@@ -71,12 +133,36 @@ img{
 	font-size: 1.1rem;
 }
 
+/*Responsiveness*/
+
+@media (min-width: 600px){
+	.my_food_content{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.food{
+		width: 24%;
+	}
+
+	.food_img,
+	img{
+		height: auto;
+	}
+}
+
+
+/*End Responsiveness*/
 .pagination{
 	display: flex;
 	text-align: center;
 	align-items: center;
 	padding: 3rem 0;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	
+	width: 240px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .page{
@@ -93,11 +179,17 @@ img{
 	background: grey;
 }
 
+/*Section: About*/
+
 #about{
 	text-align: center;
 	font-size: 1.04rem;
-	padding-bottom: 3rem;
+	padding-top: 2rem;
+}
+
+.about_all{
 	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	padding-bottom: 3rem;
 }
 
 #about p,
@@ -110,6 +202,98 @@ img{
 	font-size: 1.5rem;
 }
 
-.about_description p{
-	
+/*Responsiveness*/
+
+@media (min-width: 900px){
+	.about_img{
+		width: 800px;
+		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
+
+/*End Responsiveness*/
+
+.footer_content{
+	margin: 3rem 0;
+}
+
+.footer_content p{
+	margin: 1rem 0;
+}
+
+.footer{
+	font-size: 1.1rem;
+}
+
+.footer p:first-child{
+	font-size: 1.5rem;
+}
+
+span{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.blog > p{
+	font-size: 1.5rem;
+}
+
+.post{
+	display: flex;
+	margin-top: 20px;
+	margin-left: 10px;
+}
+
+.blog > div:nth-child(2){
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.post_img{
+	width: 50px;
+	height: 50px;
+}
+
+.post_comments p{
+	margin-top: 0;
+	margin-left: 20px;
+}
+
+.tags p{
+	font-size: 1.5rem;
+}
+
+.tag_list{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.tag_list li{
+	padding: 2px 5px;
+	background: grey;
+	margin-top: 1rem;
+	margin-right: 4px;
+	text-transform: capitalize;
+	color: #fff;
+}
+
+.tag_list li.active{
+	background: #000;
+}
+
+/*Responsiveness*/
+
+@media (min-width: 600px){
+	.footer_content{
+		display: flex;
+	}
+
+	.footer,
+	.blog,
+	.tags{
+		width: 32%;
+	}
+}
+
+/*End Responsiveness*/
